@@ -17,9 +17,11 @@ public class RetoSoftka {
         String sql;
         try {
             //Conexion con la bd
-            Class.forName("com.mysql.cj.jdbc.Driver");  
+            Class.forName("com.mysql.cj.jdbc.Driver"); 
+            String usuario = "root";
+            String clave = "";
             Connection con=DriverManager.getConnection(  
-            "jdbc:mysql://localhost:3306/retoSoftka","root","");  
+            "jdbc:mysql://localhost:3306/retoSoftka",usuario,clave);  
             sql = "insert into records(nombre,puntuacion) values(?,?)";
             ps = con.prepareStatement(sql);
               
@@ -54,7 +56,7 @@ public class RetoSoftka {
                     case 1:
                         aleatorio = numAleatorio.nextInt(5);
                         res = nivel1[aleatorio].getRespuestas();
-                        opcion = JOptionPane.showInputDialog(null,"************************\nPuntuación: "+puntuacion+"\nPrimera ronda"+
+                        opcion = JOptionPane.showInputDialog(null,"\nPuntuación: "+puntuacion+"\nPrimera ronda"+
                             "\n"+nivel1[aleatorio].getPregunta()+
                             "\nA. "+res[0].getRespuesta()+
                             "\nB. "+res[1].getRespuesta()+
@@ -67,7 +69,7 @@ public class RetoSoftka {
                 case 2:
                     aleatorio = numAleatorio.nextInt(5);
                     res = nivel2[aleatorio].getRespuestas();
-                    opcion = JOptionPane.showInputDialog(null,"************************\nPuntuación: "+puntuacion+"\nSegunda ronda"+
+                    opcion = JOptionPane.showInputDialog(null,"\nPuntuación: "+puntuacion+"\nSegunda ronda"+
                         "\n"+nivel2[aleatorio].getPregunta()+
                         "\nA. "+res[0].getRespuesta()+
                         "\nB. "+res[1].getRespuesta()+
@@ -79,7 +81,7 @@ public class RetoSoftka {
                 case 3:
                     aleatorio = numAleatorio.nextInt(5);
                     res = nivel3[aleatorio].getRespuestas();
-                    opcion = JOptionPane.showInputDialog(null,"************************\nPuntuación: "+puntuacion+"\nTercera ronda"+
+                    opcion = JOptionPane.showInputDialog(null,"\nPuntuación: "+puntuacion+"\nTercera ronda"+
                         "\n"+nivel3[aleatorio].getPregunta()+
                         "\nA. "+res[0].getRespuesta()+
                         "\nB. "+res[1].getRespuesta()+
@@ -91,7 +93,7 @@ public class RetoSoftka {
                 case 4:
                     aleatorio = numAleatorio.nextInt(5);
                     res = nivel4[aleatorio].getRespuestas();
-                    opcion = JOptionPane.showInputDialog(null,"************************\nPuntuación: "+puntuacion+"\nCuarta ronda"+
+                    opcion = JOptionPane.showInputDialog(null,"\nPuntuación: "+puntuacion+"\nCuarta ronda"+
                         "\n"+nivel4[aleatorio].getPregunta()+
                         "\nA. "+res[0].getRespuesta()+
                         "\nB. "+res[1].getRespuesta()+
@@ -103,7 +105,7 @@ public class RetoSoftka {
                 case 5:
                     aleatorio = numAleatorio.nextInt(5);
                     res = nivel5[aleatorio].getRespuestas();
-                    opcion = JOptionPane.showInputDialog(null,"************************\nPuntuación: "+puntuacion+"\nQuinta ronda"+
+                    opcion = JOptionPane.showInputDialog(null,"\nPuntuación: "+puntuacion+"\nQuinta ronda"+
                         "\n"+nivel5[aleatorio].getPregunta()+
                         "\nA. "+res[0].getRespuesta()+
                         "\nB. "+res[1].getRespuesta()+
