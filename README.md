@@ -1,6 +1,6 @@
 # retoSoftka
 Reto Técnico Para Softka U. Dimar Andrey Suárez Hidalgo
-
+El proyecto se puede visualizar desde la branch llamada Master.
 Este reto fue desarrollado en java y para guardar los datos se utilizó MySQL.
 
 Para que funcionara la base de datos se realizó lo siguiente:
